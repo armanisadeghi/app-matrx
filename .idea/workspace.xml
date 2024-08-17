@@ -5,46 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f17cdc83-6f29-4112-ae71-fb3a978d7c69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/(authenticated)/dashboard/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(authenticated)/dashboard/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(authenticated)/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(public)/layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(public)/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/auth/[auth0]/route.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Sidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout/base-layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout/mode-toggle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/user-nav.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/extras/docs.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store/slices/userSettingsSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ThemeProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/ThemeProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ThemeSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/ThemeSwitcher.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dashboard/left-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/left-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dashboard/right-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/right-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dashboard/top-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/top-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/extras/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/extras/providers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/extras/theme-switcher.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/extras/site.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/extras/site.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/extras/use-colors.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/extras/use-config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/extras/use-copy-to-clipboard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/extras/use-lift-mode.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/extras/use-lock-body.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/extras/use-media-query.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/extras/use-mounted.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/extras/use-mutation-observer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/extras/use-themes-config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "armani/dashboards",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/a-apps/app-matrx/lib",
     "node.js.detected.package.eslint": "true",
@@ -141,24 +103,28 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WfRunsListSearchHistory">{
-  &quot;history&quot;: [
+  <component name="WfRunsListSearchHistory"><![CDATA[{
+  "history": [
     {
-      &quot;branch&quot;: &quot;main&quot;,
-      &quot;currentBranchFilter&quot;: true
+      "branch": "main",
+      "currentBranchFilter": true
     },
     {
-      &quot;branch&quot;: &quot;main&quot;,
-      &quot;currentBranchFilter&quot;: true
+      "branch": "main",
+      "currentBranchFilter": true
     },
     {
-      &quot;branch&quot;: &quot;armani/dashboards&quot;,
-      &quot;currentBranchFilter&quot;: true
+      "branch": "armani/dashboards",
+      "currentBranchFilter": true
+    },
+    {
+      "branch": "main",
+      "currentBranchFilter": true
     }
   ],
-  &quot;lastFilter&quot;: {
-    &quot;branch&quot;: &quot;armani/dashboards&quot;,
-    &quot;currentBranchFilter&quot;: true
+  "lastFilter": {
+    "branch": "main",
+    "currentBranchFilter": true
   }
-}</component>
+}]]></component>
 </project>
