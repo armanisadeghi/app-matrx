@@ -1,12 +1,13 @@
+// app/layout.tsx
 import "@/styles/globals.css"
-import {Metadata, Viewport} from "next"
-import {siteConfig} from "@/config/site"
-import {fontSans} from "@/lib/fonts"
-import {cn} from "@/lib/utils"
-import {ThemeProvider} from "@/components/providers"
-import {TailwindIndicator} from "@/components/tailwind-indicator"
-import {ThemeSwitcher} from "@/components/theme-switcher"
-import {Toaster} from "@/components/ui/toaster"
+import { Metadata, Viewport } from "next"
+import { siteConfig } from "@/config/extras/site"
+import { fontSans } from "@/lib/fonts"
+import { cn } from "@/lib/utils"
+import { ThemeProvider } from "@/components/ThemeProvider"
+import { TailwindIndicator } from "@/components/extras/tailwind-indicator"
+import { ThemeSwitcher } from "@/components/extras/theme-switcher"
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
     title: {
@@ -78,8 +79,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
     themeColor: [
-        {media: "(prefers-color-scheme: light)", color: "white"},
-        {media: "(prefers-color-scheme: dark)", color: "black"},
+        { media: "(prefers-color-scheme: light)", color: "white" },
+        { media: "(prefers-color-scheme: dark)", color: "black" },
     ],
 }
 
@@ -87,7 +88,7 @@ interface RootLayoutProps {
     children: React.ReactNode
 }
 
-export default function RootLayout({children}: RootLayoutProps) {
+export default function RootLayout({ children }: RootLayoutProps) {
     return (
         <html lang="en" suppressHydrationWarning>
         <body
@@ -96,19 +97,13 @@ export default function RootLayout({children}: RootLayoutProps) {
                 fontSans.variable
             )}
         >
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-            themes={["light", "dark", "contrast"]}
-        >
+        <ThemeProvider>
             <div className="relative flex min-h-screen flex-col bg-background">
                 {children}
             </div>
-            <TailwindIndicator/>
-            <ThemeSwitcher/>
-            <Toaster/>
+            <TailwindIndicator />
+            <ThemeSwitcher />
+            <Toaster />
         </ThemeProvider>
         </body>
         </html>

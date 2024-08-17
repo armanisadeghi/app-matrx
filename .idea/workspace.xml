@@ -4,7 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f17cdc83-6f29-4112-ae71-fb3a978d7c69" name="Changes" comment="" />
+    <list default="true" id="f17cdc83-6f29-4112-ae71-fb3a978d7c69" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/dashboard/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dashboard/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ThemeProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/dashboard/left-sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/dashboard/right-sidebar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/dashboard/top-menu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/extras/providers.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/extras/tailwind-indicator.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/extras/theme-switcher.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/user-nav.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/extras/docs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/extras/site.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/extras/use-colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/extras/use-config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/extras/use-copy-to-clipboard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/extras/use-lift-mode.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/extras/use-lock-body.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/extras/use-media-query.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/extras/use-mounted.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/extras/use-mutation-observer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/extras/use-themes-config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,21 +42,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "armanisadeghi"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;armanisadeghi&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/armanisadeghi/app-matrx.git",
-    "accountId": "2cffa60b-126d-46ef-8c72-90de1e01bfc6"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/armanisadeghi/app-matrx.git&quot;,
+    &quot;accountId&quot;: &quot;2cffa60b-126d-46ef-8c72-90de1e01bfc6&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2kkmtgrWtjbbuS22PIGIlPyHqS1" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -44,7 +73,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "armani/dashboards",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/a-apps/shad/my-app",
+    "last_opened_file_path": "D:/a-apps/app-matrx/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,6 +91,18 @@
       </map>
     </option>
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\a-apps\app-matrx\lib" />
+      <recent name="D:\a-apps\app-matrx\config\extras" />
+      <recent name="D:\a-apps\app-matrx\hooks\extras" />
+      <recent name="D:\a-apps\app-matrx\components\extras" />
+      <recent name="D:\a-apps\app-matrx\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\a-apps\app-matrx\components\extras" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,31 +118,31 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723836164885</updated>
-      <workItem from="1723836166094" duration="4687000" />
+      <workItem from="1723836166094" duration="15013000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WfRunsListSearchHistory"><![CDATA[{
-  "history": [
+  <component name="WfRunsListSearchHistory">{
+  &quot;history&quot;: [
     {
-      "branch": "main",
-      "currentBranchFilter": true
+      &quot;branch&quot;: &quot;main&quot;,
+      &quot;currentBranchFilter&quot;: true
     },
     {
-      "branch": "main",
-      "currentBranchFilter": true
+      &quot;branch&quot;: &quot;main&quot;,
+      &quot;currentBranchFilter&quot;: true
     },
     {
-      "branch": "armani/dashboards",
-      "currentBranchFilter": true
+      &quot;branch&quot;: &quot;armani/dashboards&quot;,
+      &quot;currentBranchFilter&quot;: true
     }
   ],
-  "lastFilter": {
-    "branch": "armani/dashboards",
-    "currentBranchFilter": true
+  &quot;lastFilter&quot;: {
+    &quot;branch&quot;: &quot;armani/dashboards&quot;,
+    &quot;currentBranchFilter&quot;: true
   }
-}]]></component>
+}</component>
 </project>
