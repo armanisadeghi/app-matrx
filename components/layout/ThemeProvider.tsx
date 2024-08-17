@@ -1,4 +1,4 @@
-// components/ThemeProvider.tsx
+// components/layout/ThemeProvider.tsx
 'use client';
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';

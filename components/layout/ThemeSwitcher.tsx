@@ -2,7 +2,7 @@
 'use client';
 
 import React from 'react';
-import { useTheme } from './ThemeProvider';
+import { useTheme } from '@/components/layout/ThemeProvider';
 import { Moon, Sun } from 'lucide-react';
 
 export const ThemeSwitcher: React.FC = () => {

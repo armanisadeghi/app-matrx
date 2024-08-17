@@ -1,11 +1,9 @@
-// app/layout.tsx
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
 import { siteConfig } from "@/config/extras/site"
 import { inter, montserrat } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { ThemeProvider } from "@/components/ThemeProvider"
-import { ThemeSwitcher } from "@/components/ThemeSwitcher"
+import { ThemeProvider } from "@/components/layout/ThemeProvider"
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
@@ -96,10 +94,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             )}
         >
         <ThemeProvider>
-            <div className="relative flex min-h-screen flex-col bg-background">
-                <ThemeSwitcher />
-                {children}
-            </div>
+            {children}
             <Toaster />
         </ThemeProvider>
         </body>

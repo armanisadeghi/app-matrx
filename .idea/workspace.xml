@@ -5,21 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f17cdc83-6f29-4112-ae71-fb3a978d7c69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/dashboard/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(authenticated)/dashboard/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(authenticated)/dashboard/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(authenticated)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(public)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(public)/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/auth/[auth0]/route.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/Sidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ThemeSwitcher.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/base-layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/mode-toggle.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/components/user-nav.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/config/extras/docs.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/config/extras/site.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/store/slices/userSettingsSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/dashboard/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/dashboard/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dashboard/page.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ThemeProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ThemeProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dashboard/left-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/dashboard/left-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dashboard/right-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/dashboard/right-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dashboard/top-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/dashboard/top-menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ThemeProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/ThemeProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ThemeSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/ThemeSwitcher.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/dashboard/left-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/left-sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/dashboard/right-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/right-sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/dashboard/top-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout/top-menu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/extras/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/extras/providers.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/extras/theme-switcher.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/hooks/extras/use-colors.ts" beforeDir="false" />
@@ -102,11 +110,11 @@
       <recent name="D:\a-apps\app-matrx\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\a-apps\app-matrx\app\(authenticated)" />
+      <recent name="D:\a-apps\app-matrx\components\layout" />
       <recent name="D:\a-apps\app-matrx\components\extras" />
       <recent name="D:\a-apps\app-matrx\components" />
       <recent name="D:\a-apps\app-matrx\_dev\hooks" />
-      <recent name="D:\a-apps\app-matrx\_dev\components" />
-      <recent name="D:\a-apps\app-matrx\_dev" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -124,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723836164885</updated>
-      <workItem from="1723836166094" duration="18562000" />
+      <workItem from="1723836166094" duration="26049000" />
     </task>
     <servers />
   </component>

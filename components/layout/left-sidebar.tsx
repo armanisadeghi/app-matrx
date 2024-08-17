@@ -1,3 +1,4 @@
+// components/layout/left-sidebar.tsx
 'use client';
 
 import React from 'react';
@@ -8,7 +9,8 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Home, Users, ShoppingCart, BarChart, Settings } from 'lucide-react';
 
 interface LeftSidebarProps {
-    isOpen: boolean;
+    available: boolean;
+    state: 'closed' | 'icon' | 'full';
 }
 
 const sidebarNavItems = [
@@ -19,13 +21,17 @@ const sidebarNavItems = [
     { title: "Settings", href: "/dashboard/settings", icon: Settings },
 ];
 
-const LeftSidebar: React.FC<LeftSidebarProps> = ({ isOpen }) => {
+const LeftSidebar: React.FC<LeftSidebarProps> = ({ available, state }) => {
     const pathname = usePathname();
 
+    if (!available || state === 'closed') return null;
+
+    const isIconOnly = state === 'icon';
+
     return (
-        <div className={cn(
-            "fixed left-0 top-14 z-30 h-[calc(100vh-3.5rem)] w-64 border-r bg-background transition-all duration-300 ease-in-out",
-            isOpen ? "translate-x-0" : "-translate-x-full"
+        <aside className={cn(
+            "border-r bg-background transition-all duration-300 ease-in-out",
+            isIconOnly ? "w-16" : "w-64"
         )}>
             <ScrollArea className="h-full py-2">
                 <nav className="grid items-start px-4 text-sm font-medium">
@@ -36,14 +42,14 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({ isOpen }) => {
                   pathname === item.href ? "bg-gray-200 dark:bg-gray-800" : "transparent",
                   "my-1"
               )}>
-                <item.icon className="mr-2 h-4 w-4" />
-                <span>{item.title}</span>
+                <item.icon className="h-4 w-4" />
+                  {!isIconOnly && <span className="ml-2">{item.title}</span>}
               </span>
                         </Link>
                     ))}
                 </nav>
             </ScrollArea>
-        </div>
+        </aside>
     );
 };
 
