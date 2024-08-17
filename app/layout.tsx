@@ -1,10 +1,10 @@
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
-import { siteConfig } from "@/config/extras/site"
-import { inter, montserrat } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
-import { ThemeProvider } from "@/components/layout/ThemeProvider"
-import { Toaster } from "@/components/ui/toaster"
+import {siteConfig} from "@/config/extras/site";
+import {ThemeProvider} from "@/components/layout/ThemeProvider";
+import {Toaster} from "@/components/ui/toaster";
+import {cn} from "@/lib/utils";
+import {inter, montserrat} from "@/lib/fonts";
 
 export const metadata: Metadata = {
     title: {
