@@ -1,4 +1,6 @@
 // components/ThemeProvider.tsx
+'use client';
+
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
 type Theme = 'light' | 'dark';
@@ -8,7 +10,6 @@ interface ThemeContextProps {
     theme: Theme;
     contrastColor: ContrastColor;
     toggleTheme: () => void;
-    setContrastColor: (color: ContrastColor) => void;
 }
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
@@ -21,22 +22,34 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
         setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
     };
 
-    const handleSetContrastColor = (color: ContrastColor) => {
-        setContrastColor(color);
-    };
+    useEffect(() => {
+        const fetchUserSettings = async () => {
+            try {
+                const response = await fetch('/api/user-settings');
+                const settings = await response.json();
+
+                if (settings.theme) {
+                    setTheme(settings.theme);
+                }
+                if (settings.contrastColor) {
+                    setContrastColor(settings.contrastColor);
+                }
+            } catch (error) {
+                console.error('Failed to fetch user settings:', error);
+            }
+        };
+
+        fetchUserSettings();
+    }, []);
 
     useEffect(() => {
         document.documentElement.classList.toggle('dark', theme === 'dark');
-        document.documentElement.classList.toggle('contrast-red', contrastColor === 'red');
-        document.documentElement.classList.toggle('contrast-blue', contrastColor === 'blue');
-        document.documentElement.classList.toggle('contrast-green', contrastColor === 'green');
-        document.documentElement.classList.toggle('contrast-violet', contrastColor === 'violet');
-        document.documentElement.classList.toggle('contrast-yellow', contrastColor === 'yellow');
+        document.documentElement.setAttribute('data-contrast', contrastColor);
     }, [theme, contrastColor]);
 
     return (
-        <ThemeContext.Provider value={{ theme, contrastColor, toggleTheme, setContrastColor: handleSetContrastColor }}>
-            <div className={`${theme} contrast-${contrastColor}`}>{children}</div>
+        <ThemeContext.Provider value={{ theme, contrastColor, toggleTheme }}>
+            {children}
         </ThemeContext.Provider>
     );
 };
@@ -48,3 +61,61 @@ export const useTheme = () => {
     }
     return context;
 };
+
+
+
+// TODO: after setting up Redux
+//
+// // components/ThemeProvider.tsx
+// import { ReactNode, useEffect } from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { setTheme, setContrastColor } from '../store/slices/userSettingsSlice';
+// import { RootState } from '../store'; // Assuming you have a store configured
+//
+// interface ThemeProviderProps {
+//     children: ReactNode;
+// }
+//
+// export const ThemeProvider = ({ children }: ThemeProviderProps) => {
+//     const dispatch = useDispatch();
+//     const { theme, contrastColor } = useSelector((state: RootState) => state.userSettings);
+//
+//     useEffect(() => {
+//         // TODO: Initialize settings from cookies or local storage on mount
+//         // This is a placeholder for the initialization logic
+//         const initializeSettings = () => {
+//             // Example: Reading from cookies
+//             const savedTheme = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+//             if (savedTheme) {
+//                 dispatch(setTheme(savedTheme as 'light' | 'dark'));
+//             }
+//             // Similar logic for contrastColor
+//         };
+//
+//         initializeSettings();
+//     }, [dispatch]);
+//
+//     useEffect(() => {
+//         document.documentElement.classList.toggle('dark', theme === 'dark');
+//         document.documentElement.setAttribute('data-contrast', contrastColor);
+//
+//         // TODO: Save to cookies
+//         document.cookie = `theme=${theme}; path=/; max-age=31536000`; // 1 year expiry
+//         // Similar logic for contrastColor
+//     }, [theme, contrastColor]);
+//
+//     return <>{children}</>;
+// };
+//
+// // Hook for accessing theme-related functions
+// export const useTheme = () => {
+//     const dispatch = useDispatch();
+//     const { theme, contrastColor } = useSelector((state: RootState) => state.userSettings);
+//
+//     return {
+//         theme,
+//         contrastColor,
+//         toggleTheme: () => dispatch(setTheme(theme === 'light' ? 'dark' : 'light')),
+//         setContrastColor: (color: UserSettings['contrastColor']) => dispatch(setContrastColor(color)),
+//     };
+// };

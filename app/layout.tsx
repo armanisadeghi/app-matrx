@@ -2,11 +2,10 @@
 import "@/styles/globals.css"
 import { Metadata, Viewport } from "next"
 import { siteConfig } from "@/config/extras/site"
-import { fontSans } from "@/lib/fonts"
+import { inter, montserrat } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/components/ThemeProvider"
-import { TailwindIndicator } from "@/components/extras/tailwind-indicator"
-import { ThemeSwitcher } from "@/components/extras/theme-switcher"
+import { ThemeSwitcher } from "@/components/ThemeSwitcher"
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
@@ -90,19 +89,17 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en" suppressHydrationWarning className={`${inter.variable} ${montserrat.variable}`}>
         <body
             className={cn(
                 "min-h-screen bg-background font-sans antialiased",
-                fontSans.variable
             )}
         >
         <ThemeProvider>
             <div className="relative flex min-h-screen flex-col bg-background">
+                <ThemeSwitcher />
                 {children}
             </div>
-            <TailwindIndicator />
-            <ThemeSwitcher />
             <Toaster />
         </ThemeProvider>
         </body>
