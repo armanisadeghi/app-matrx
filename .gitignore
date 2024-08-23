@@ -42,8 +42,8 @@ __pycache__/
 *.so
 
 # IntelliJ IDEA
-.idea/
-
+.idea/*
+.idea*
 # CMake
 cmake-build-*/
 
