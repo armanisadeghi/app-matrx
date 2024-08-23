@@ -1,113 +1,126 @@
-import Image from "next/image";
+import React from 'react';
+import {Database, Lock, Zap, HardDrive, Clock, Box, LucideIcon} from 'lucide-react';
+import {Button} from "@/components/ui/button";
+import {Card, CardHeader, CardTitle, CardDescription, CardContent} from "@/components/ui/card";
+import {ModeToggle} from "@/components/layout/mode-toggle";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+interface TopMenuProps {
+    // Add any props you might need
 }
+
+const TopMenu: React.FC<TopMenuProps> = () => {
+    return (
+        <header
+            className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+            <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
+                <div className="flex items-center space-x-4">
+                    <span className="text-primary text-2xl font-bold">YourLogo</span>
+                    <nav className="hidden md:flex space-x-4">
+                        <a href="#" className="text-foreground/60 hover:text-foreground">Product</a>
+                        <a href="#" className="text-foreground/60 hover:text-foreground">Developers</a>
+                        <a href="#" className="text-foreground/60 hover:text-foreground">Pricing</a>
+                        <a href="#" className="text-foreground/60 hover:text-foreground">Docs</a>
+                        <a href="#" className="text-foreground/60 hover:text-foreground">Blog</a>
+                    </nav>
+                </div>
+                <div className="flex items-center space-x-2">
+                    <ModeToggle/>
+                    <Button>Start your project</Button>
+                </div>
+            </div>
+        </header>
+    );
+};
+
+interface FeatureCardProps {
+    Icon: LucideIcon;
+    title: string;
+    description: string;
+    features?: string[];
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({Icon, title, description, features}) => (
+    <Card className="transition-all duration-300 ease-in-out hover:shadow-lg hover:-translate-y-1">
+        <CardHeader>
+            <Icon className="text-primary w-8 h-8 mb-4"/>
+            <CardTitle>{title}</CardTitle>
+            <CardDescription>{description}</CardDescription>
+        </CardHeader>
+        {features && (
+            <CardContent>
+                <ul className="space-y-2">
+                    {features.map((feature, index) => (
+                        <li key={index} className="flex items-center">
+                            <span className="text-primary mr-2">✓</span> {feature}
+                        </li>
+                    ))}
+                </ul>
+            </CardContent>
+        )}
+    </Card>
+);
+
+const HomePage: React.FC = () => {
+    return (
+        <div className="min-h-screen bg-background text-foreground">
+            <TopMenu/>
+            <main className="container mx-auto px-4 py-16 text-center">
+                <h1 className="text-5xl font-bold mb-4">No-Code AI</h1>
+                <h1 className="text-5xl font-bold mb-4">Business Automation</h1>
+                <h1 className="text-5xl font-bold mb-4">Framework</h1>
+
+                <p className="text-xl mb-8 max-w-2xl mx-auto">
+                    AI Matrix is an innovative solution for enterprise-level companies.
+                    Start your project with advanced AI capabilities, seamless integration, and scalable infrastructure.
+                </p>
+                <div className="flex justify-center gap-4">
+                    <Button size="lg">Get Started</Button>
+                    <Button size="lg" variant="outline">Documentation</Button>
+                    <Button size="lg" variant="outline">Talk To Us</Button>
+                </div>
+
+                <div className="flex justify-center flex-wrap gap-8 my-16">
+                    {['Company1', 'Company2', 'Company3', 'Company4', 'Company5', 'Company6'].map((company, index) => (
+                        <div key={index} className="text-muted-foreground">{company}</div>
+                    ))}
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-8 text-left">
+                    <FeatureCard
+                        Icon={Database}
+                        title="AI Processing"
+                        description="Advanced AI capabilities for complex data processing and analysis."
+                        features={['Feature 1', 'Feature 2', 'Feature 3']}
+                    />
+                    <FeatureCard
+                        Icon={Lock}
+                        title="Secure Integration"
+                        description="Seamlessly integrate AI into your existing workflows with top-tier security."
+                    />
+                    <FeatureCard
+                        Icon={Zap}
+                        title="Rapid Deployment"
+                        description="Quickly implement AI solutions without extensive infrastructure changes."
+                    />
+                    <FeatureCard
+                        Icon={HardDrive}
+                        title="Data Management"
+                        description="Efficiently handle and process large volumes of business data."
+                    />
+                    <FeatureCard
+                        Icon={Clock}
+                        title="Real-time Analytics"
+                        description="Get instant insights with real-time data analysis and reporting."
+                    />
+                    <FeatureCard
+                        Icon={Box}
+                        title="Scalable Solution"
+                        description="Grow your AI capabilities alongside your business needs."
+                    />
+                </div>
+            </main>
+        </div>
+    );
+};
+
+export default HomePage;
